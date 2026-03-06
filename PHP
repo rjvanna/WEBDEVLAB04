@@ -1,0 +1,25 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    
+    if (empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['department'])) {
+        die("Error: All fields are required.");
+    }
+    $first = trim($_POST['first_name']);
+    $last = trim($_POST['last_name']);
+    $dept = trim($_POST['department']);
+    
+    $part1 = substr($first, 0, 4);
+    $part2 = substr($last, 0, 4);
+    $year = date("y"); 
+     
+    $email = strtolower($dept . "_" . $part1 . $part2 . $year . "@jbu.edu");
+ 
+    echo "<!DOCTYPE html><html><head><title>Result</title></head>
+    <body style='text-align: center; margin-top: 50px;'>
+        <h2>Admission Successful</h2>
+        <p>Name: $first $last</p>
+        <p>Assigned Email: <strong>$email</strong></p>
+    </body></html>";
+}
+?>
