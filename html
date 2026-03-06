@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form</h2>
+        <form action="emailcreator.php" method="POST">
+            <label>first name: </label>
+            <input type="text" name="first_name" required>
+            
+            <label>last name:</label>
+            <input type="text" name="last_name" required>
+            
+            <label>date of birth:</label>
+            <input type="date" name="dob" required>
+            
+            <label>department:</label>
+            <select name="department" required>
+                <option value="cs">computer science</option>
+                <option value="eng">engineering</option>
+                <option value="bus">business</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
